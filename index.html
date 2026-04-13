@@ -1,384 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awards & Honours | Narendra Modi</title>
+    <title>Global Recognition Archive | Narendra Modi (2014–2026)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #ff9933;
             --secondary: #138808;
             --accent: #000080;
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
-            --gold: #d4af37;
-            --glass: rgba(255, 255, 255, 0.9);
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --gold: #c5a021;
+            --dark: #121212;
+            --bg: #fdfdfd;
+            --card: #ffffff;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fff;
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- Scroll Progress Bar --- */
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), white, var(--secondary));
-            z-index: 1001;
-            width: 0%;
-        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
         /* --- Header & Navigation --- */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--accent);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        #progress-bar { position: fixed; top: 0; left: 0; height: 5px; background: linear-gradient(to right, var(--primary), #fff, var(--secondary)); z-index: 2000; width: 0%; }
+        nav { position: fixed; top: 0; width: 100%; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.9); backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid #eee; }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--accent); text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: #444; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
 
         /* --- Hero Section --- */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1599408162164-9fb56e828f32?q=80&w=2070') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 10%;
-            margin-top: 60px;
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://i.imgur.com/8mByrI2.jpeg') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 10%;
         }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; max-width: 850px; font-weight: 300; opacity: 0.9; }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
+        /* --- Section Styling --- */
+        section { padding: 80px 8%; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--dark); font-weight: 900; }
+        .divider { width: 60px; height: 4px; background: var(--primary); margin: 15px auto; }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
+        /* --- Table Styling --- */
+        .table-container { background: var(--card); border-radius: 15px; box-shadow: var(--shadow); overflow-x: auto; border: 1px solid #eee; margin-bottom: 40px; }
+        table { width: 100%; border-collapse: collapse; min-width: 1000px; text-align: left; }
+        th { background: #f9f9f9; padding: 1.2rem; font-size: 0.8rem; text-transform: uppercase; color: #777; border-bottom: 2px solid #eee; }
+        td { padding: 1.2rem; border-bottom: 1px solid #f1f1f1; font-size: 0.95rem; vertical-align: middle; }
+        tr:hover { background-color: #fffaf5; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; color: white; text-transform: uppercase; }
+        .badge-gold { background: var(--gold); }
+        .badge-accent { background: var(--accent); }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
+        /* --- Info Cards --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--accent); }
+        .year { color: var(--primary); font-weight: 800; font-size: 0.8rem; }
 
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--primary);
-        }
-
-        /* --- Content Sections --- */
-        section {
-            padding: 5rem 10%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-        }
-
-        /* --- Awards Card Grid --- */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .award-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border-bottom: 4px solid transparent;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .award-card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--primary);
-        }
-
-        .award-card .year {
-            font-weight: 800;
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .award-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent);
-        }
-
-        .award-card .country {
-            font-weight: 600;
-            color: #666;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .award-card p {
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        /* --- State Honours Table --- */
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 800px;
-        }
-
-        th {
-            background: var(--light);
-            text-align: left;
-            padding: 1.2rem;
-            font-weight: 700;
-            color: var(--accent);
-            border-bottom: 2px solid #eee;
-        }
-
-        td {
-            padding: 1.2rem;
-            border-bottom: 1px solid #eee;
-            vertical-align: middle;
-        }
-
-        tr:hover td {
-            background: rgba(255, 153, 51, 0.05);
-        }
-
-        .badge-honor {
-            background: var(--gold);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* --- Gallery Section --- */
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .gallery-item {
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-            filter: grayscale(20%);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            font-size: 0.8rem;
-        }
-
-        /* --- Global Recognition Carousel/List --- */
-        .recognition-list {
-            background: var(--dark);
-            color: white;
-            border-radius: 20px;
-            padding: 3rem;
-        }
-
-        .recognition-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .rec-label {
-            color: var(--primary);
-            font-weight: 700;
-            width: 100px;
-        }
-
-        .rec-award {
-            flex: 1;
-            font-weight: 600;
-        }
-
-        .rec-org {
-            color: #aaa;
-            font-style: italic;
-        }
+        /* --- Policy Section --- */
+        .policy-banner { background: var(--dark); color: white; padding: 60px; border-radius: 20px; text-align: center; }
+        .policy-banner h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; font-size: 2.5rem; }
+        .policy-content { max-width: 800px; margin: 0 auto; color: #ccc; }
 
         /* --- Footer --- */
-        footer {
-            background: #111;
-            color: #888;
-            padding: 4rem 10% 2rem;
-            text-align: center;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-            text-align: left;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-col p {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .copy {
-            border-top: 1px solid #222;
-            padding-top: 2rem;
-            font-size: 0.85rem;
-        }
-
-        /* --- Animations --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 3rem; }
-            .gallery-container { grid-template-columns: repeat(2, 1fr); }
-        }
+        footer { background: #0a0a0a; color: #777; padding: 60px 8% 30px; text-align: center; }
+        .footer-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; margin-bottom: 40px; }
+        .footer-links h4 { color: white; margin-bottom: 15px; }
+        .copy { border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
 
         @media (max-width: 768px) {
-            nav { padding: 1rem 5%; }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 60px 5%; }
             .nav-links { display: none; }
-            section { padding: 3rem 5%; }
-            .hero h1 { font-size: 2.2rem; }
-            .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .awards-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -389,405 +87,193 @@
     <nav>
         <a href="#" class="logo">AINex<span>Forge</span></a>
         <div class="nav-links">
-            <a href="#honours">State Honours</a>
-            <a href="#international">International</a>
-            <a href="#recognitions">Recognitions</a>
-            <a href="#gallery">Gallery</a>
+            <a href="#state-honours">State Honours</a>
+            <a href="#legislature">Legislatures</a>
+            <a href="#city-keys">City Keys</a>
+            <a href="#honorary">Honorary</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Narendra Modi</h1>
-        <p>A global statesman and the 14th Prime Minister of India. Recognized worldwide for his leadership, diplomacy, and contribution to international cooperation through over two dozen civilian honours.</p>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>30+</h3>
-                <p>Global Awards</p>
-            </div>
-            <div class="stat-item">
-                <h3>15+</h3>
-                <p>Highest Civilian Honours</p>
-            </div>
-            <div class="stat-item">
-                <h3>1971</h3>
-                <p>Active Since</p>
-            </div>
-        </div>
+        <h1>Awards & Honours</h1>
+        <p>The 14th Prime Minister of India, Narendra Modi, is the most internationally decorated Indian leader in history. This archive documents over two dozen civilian honours and global recognitions received from 2014 to 2026.</p>
     </header>
 
-    <section id="honours">
-        <div class="section-title">
-            <h2>State Honours</h2>
-            <p>Significant civilian decorations from sovereign nations across the globe.</p>
+    <!-- STATE HONOURS -->
+    <section id="state-honours">
+        <div class="section-header">
+            <h2>State Honours Archive</h2>
+            <div class="divider"></div>
+            <p>Chronological record of the highest civilian decorations from sovereign nations.</p>
         </div>
 
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Year</th>
-                        <th>Decoration</th>
+                        <th>Date</th>
+                        <th>Honour</th>
                         <th>Country</th>
                         <th>Presenter</th>
-                        <th>Status</th>
+                        <th>Significance</th>
                     </tr>
                 </thead>
                 <tbody>
-                       <tr>
-                        <td><span class="year-pill">25 Feb 2026</span>Tel Aviv</td>
-                        <td><strong>Medal of the Knesset</strong></td>
-                        <td>Israel</td>
-                        <td>Speaker Amir Ohana</td>
-                        <td><span class="badge badge-blue">Highest Parliamentary</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">18 Dec 2025</span>Muscat</td>
-                        <td><strong>Order of Oman</strong></td>
-                        <td>Oman</td>
-                        <td>Sultan Haitham bin Tariq</td>
-                        <td>First Class (2nd Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">16 Dec 2025</span>Addis Ababa</td>
-                        <td><strong>Great Honour Nishan of Ethiopia</strong></td>
-                        <td>Ethiopia</td>
-                        <td>PM Abiy Ahmed</td>
-                        <td><span class="badge badge-gold">Highest Civilian</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">09 July 2025</span>Windhoek</td>
-                        <td><strong>Order of the Welwitschia</strong></td>
-                        <td>Namibia</td>
-                        <td>Pres. Netumbo Nandi-Ndaitwah</td>
-                        <td>Grand Commander (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">08 July 2025</span>Brasília</td>
-                        <td><strong>Order of the Southern Cross</strong></td>
-                        <td>Brazil</td>
-                        <td>Pres. Luiz Inácio Lula da Silva</td>
-                        <td>Grand Collar (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">04 July 2025</span>Port of Spain</td>
-                        <td><strong>Order of the Republic of Trinidad & Tobago</strong></td>
-                        <td>T&T</td>
-                        <td>Pres. Christine Kangaloo</td>
-                        <td><span class="badge badge-gold">Highest Civilian (ORTT)</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">02 July 2025</span>Accra</td>
-                        <td><strong>Order of the Star of Ghana</strong></td>
-                        <td>Ghana</td>
-                        <td>Pres. John Mahama</td>
-                        <td>Honorary Officer (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">16 June 2025</span>Nicosia</td>
-                        <td><strong>Order of Makarios III</strong></td>
-                        <td>Cyprus</td>
-                        <td>Pres. Nikos Christodoulides</td>
-                        <td>Grand Cross (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">05 April 2025</span>Colombo</td>
-                        <td><strong>Sri Lanka Mitra Vibhushana</strong></td>
-                        <td>Sri Lanka</td>
-                        <td>Pres. Anura Kumara Dissanayake</td>
-                        <td>Highest Honour for foreign dignitaries.</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">11 Mar 2025</span>Port Louis</td>
-                        <td><strong>Order of the Star and Key</strong></td>
-                        <td>Mauritius</td>
-                        <td>Pres. Dharam Gokhool</td>
-                        <td>Grand Commander (GCSK)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">05 Mar 2025</span>Bridgetown</td>
-                        <td><strong>Order of Freedom of Barbados</strong></td>
-                        <td>Barbados</td>
-                        <td>Pres. Sandra Mason</td>
-                        <td>Honorary Member (FB)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">22 Dec 2024</span>Kuwait City</td>
-                        <td><strong>Order of Mubarak the Great</strong></td>
-                        <td>Kuwait</td>
-                        <td>Emir Mishal Al-Ahmad</td>
-                        <td>Collar (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">20 Nov 2024</span>Georgetown</td>
-                        <td><strong>Order of Excellence of Guyana</strong></td>
-                        <td>Guyana</td>
-                        <td>Pres. Irfaan Ali</td>
-                        <td><span class="badge badge-gold">Highest Civilian (OE)</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">20 Nov 2024</span>Georgetown</td>
-                        <td><strong>Dominica Award of Honour</strong></td>
-                        <td>Dominica</td>
-                        <td>Pres. Sylvanie Burton</td>
-                        <td><span class="badge badge-gold">Highest Civilian (DAH)</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">17 Nov 2024</span>Abuja</td>
-                        <td><strong>Order of the Niger</strong></td>
-                        <td>Nigeria</td>
-                        <td>Pres. Bola Tinubu</td>
-                        <td>Grand Commander (GCON)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">09 July 2024</span>Moscow</td>
-                        <td><strong>Order of St. Andrew</strong></td>
-                        <td>Russia</td>
-                        <td>Pres. Vladimir Putin</td>
-                        <td>Grand Cross with Collar (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td><span class="year-pill">22 Mar 2024</span>Thimphu</td>
-                        <td><strong>Order of the Dragon King</strong></td>
-                        <td>Bhutan</td>
-                        <td>King Jigme Khesar Namgyel</td>
-                        <td>First Class (Highest Civilian)</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td><strong>Order of St. Andrew</strong></td>
-                        <td>Russia</td>
-                        <td>Vladimir Putin</td>
-                        <td><span class="badge-honor">Highest Civilian</span></td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td><strong>Order of the Niger</strong></td>
-                        <td>Nigeria</td>
-                        <td>Bola Tinubu</td>
-                        <td><span class="badge-honor">GCON</span></td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td><strong>Order of Excellence</strong></td>
-                        <td>Guyana</td>
-                        <td>Irfaan Ali</td>
-                        <td><span class="badge-honor">Highest Civilian</span></td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td><strong>Legion of Honour</strong></td>
-                        <td>France</td>
-                        <td>Emmanuel Macron</td>
-                        <td><span class="badge-honor">Grand Cross</span></td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td><strong>Order of the Nile</strong></td>
-                        <td>Egypt</td>
-                        <td>Abdel Fattah al-Sisi</td>
-                        <td><span class="badge-honor">Highest Civilian</span></td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td><strong>Legion of Merit</strong></td>
-                        <td>United States</td>
-                        <td>Donald Trump</td>
-                        <td><span class="badge-honor">Chief Commander</span></td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td><strong>Order of Zayed</strong></td>
-                        <td>UAE</td>
-                        <td>Mohamed bin Zayed</td>
-                        <td><span class="badge-honor">Highest Civilian</span></td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td><strong>Order of King Abdulaziz</strong></td>
-                        <td>Saudi Arabia</td>
-                        <td>King Salman</td>
-                        <td><span class="badge-honor">Special Class</span></td>
-                    </tr>
+                    <tr><td>25 Feb 2026</td><td><strong>Medal of the Knesset</strong></td><td>Israel</td><td>Amir Ohana</td><td><span class="badge badge-gold">Highest Parliamentary</span></td></tr>
+                    <tr><td>18 Dec 2025</td><td><strong>Order of Oman</strong></td><td>Oman</td><td>Sultan Haitham</td><td>First Class (2nd Highest)</td></tr>
+                    <tr><td>16 Dec 2025</td><td><strong>Great Honour Nishan</strong></td><td>Ethiopia</td><td>Abiy Ahmed</td><td><span class="badge badge-gold">Highest Civilian</span></td></tr>
+                    <tr><td>09 July 2025</td><td><strong>Order of the Welwitschia</strong></td><td>Namibia</td><td>Netumbo Nandi</td><td>Grand Commander</td></tr>
+                    <tr><td>08 July 2025</td><td><strong>Order of the Southern Cross</strong></td><td>Brazil</td><td>Lula da Silva</td><td>Grand Collar</td></tr>
+                    <tr><td>04 July 2025</td><td><strong>Order of the Republic of T&T</strong></td><td>Trinidad & Tobago</td><td>Christine Kangaloo</td><td><span class="badge badge-gold">Highest Civilian</span></td></tr>
+                    <tr><td>02 July 2025</td><td><strong>Order of the Star of Ghana</strong></td><td>Ghana</td><td>John Mahama</td><td>Honorary Officer</td></tr>
+                    <tr><td>16 June 2025</td><td><strong>Order of Makarios III</strong></td><td>Cyprus</td><td>Nikos Christodoulides</td><td>Grand Cross</td></tr>
+                    <tr><td>05 April 2025</td><td><strong>Sri Lanka Mitra Vibhushana</strong></td><td>Sri Lanka</td><td>Anura Dissanayake</td><td>Highest Dignitary Award</td></tr>
+                    <tr><td>11 Mar 2025</td><td><strong>Order of Star & Key (Indian Ocean)</strong></td><td>Mauritius</td><td>Dharam Gokhool</td><td>Grand Commander</td></tr>
+                    <tr><td>05 Mar 2025</td><td><strong>Order of Freedom of Barbados</strong></td><td>Barbados</td><td>Sandra Mason</td><td>Honorary Member</td></tr>
+                    <tr><td>22 Dec 2024</td><td><strong>Order of Mubarak the Great</strong></td><td>Kuwait</td><td>Emir Mishal</td><td>Collar (Highest)</td></tr>
+                    <tr><td>20 Nov 2024</td><td><strong>Order of Excellence of Guyana</strong></td><td>Guyana</td><td>Irfaan Ali</td><td><span class="badge badge-gold">Highest Civilian</span></td></tr>
+                    <tr><td>20 Nov 2024</td><td><strong>Dominica Award of Honour</strong></td><td>Dominica</td><td>Sylvanie Burton</td><td><span class="badge badge-gold">Highest Civilian</span></td></tr>
+                    <tr><td>17 Nov 2024</td><td><strong>Order of the Niger</strong></td><td>Nigeria</td><td>Bola Tinubu</td><td>Grand Commander (GCON)</td></tr>
+                    <tr><td>09 July 2024</td><td><strong>Order of St. Andrew</strong></td><td>Russia</td><td>Vladimir Putin</td><td>Grand Cross with Collar</td></tr>
+                    <tr><td>22 Mar 2024</td><td><strong>Order of the Dragon King</strong></td><td>Bhutan</td><td>King Jigme Khesar</td><td>First Class (Highest)</td></tr>
+                    <tr><td>25 Aug 2023</td><td><strong>Order of Honour</strong></td><td>Greece</td><td>K. Sakellaropoulou</td><td>Grand Cross</td></tr>
+                    <tr><td>14 July 2023</td><td><strong>Legion of Honour</strong></td><td>France</td><td>Emmanuel Macron</td><td>Grand Cross (Highest)</td></tr>
+                    <tr><td>25 June 2023</td><td><strong>Order of the Nile</strong></td><td>Egypt</td><td>Abdel Fattah al-Sisi</td><td>Collar (Highest)</td></tr>
+                    <tr><td>22 May 2023</td><td><strong>Order of Logohu</strong></td><td>Papua New Guinea</td><td>Bob Dadae</td><td>GCL (Highest)</td></tr>
+                    <tr><td>21 Dec 2020</td><td><strong>Legion of Merit</strong></td><td>United States</td><td>Donald Trump</td><td>Chief Commander</td></tr>
+                    <tr><td>24 Aug 2019</td><td><strong>Order of Zayed</strong></td><td>UAE</td><td>Mohamed bin Zayed</td><td>Collar (Highest)</td></tr>
+                    <tr><td>03 April 2016</td><td><strong>Order of King Abdulaziz</strong></td><td>Saudi Arabia</td><td>King Salman</td><td>Special Class</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section id="international" style="background: var(--light);">
-        <div class="section-title">
-            <h2>Honorary Global Awards</h2>
-            <p>Prestigious recognitions from international organizations for policy and social leadership.</p>
+    <!-- KEY TO THE CITY -->
+    <section id="city-keys" style="background: #f4f4f4;">
+        <div class="section-header">
+            <h2>Key to the City</h2>
+            <div class="divider"></div>
         </div>
-
-        <div class="awards-grid">
-            <div class="award-card">
-                <span class="year">2018</span>
-                <h4>Champions of the Earth</h4>
-                <div class="country">United Nations</div>
-                <p>The UN's highest environmental honour, awarded for pioneering work with the International Solar Alliance.</p>
+        <div class="grid">
+            <div class="card">
+                <span class="year">2025</span>
+                <h3>Buenos Aires, Argentina</h3>
+                <p>Presented by Chief Jorge Macri during the official state visit.</p>
             </div>
-            <div class="award-card">
-                <span class="year">2018</span>
-                <h4>Seoul Peace Prize</h4>
-                <div class="country">South Korea</div>
-                <p>Recognized for contribution to global peace through the 'Modi Doctrine' and proactive foreign policy.</p>
-            </div>
-            <div class="award-card">
-                <span class="year">2019</span>
-                <h4>Global Goalkeeper Award</h4>
-                <div class="country">Gates Foundation</div>
-                <p>In recognition of the Swachh Bharat Mission and the massive progress in providing safe sanitation.</p>
-            </div>
-            <div class="award-card">
-                <span class="year">2021</span>
-                <h4>Global Energy/Env Leadership</h4>
-                <div class="country">CERAWeek</div>
-                <p>Awarded for commitment toward expanding India's renewable energy capacity to meet global climate goals.</p>
-            </div>
-            <div class="award-card">
+            <div class="card">
                 <span class="year">2024</span>
-                <h4>Global Peace Award</h4>
-                <div class="country">Association of Minorities</div>
-                <p>Awarded for minority upliftment and fostering global peace efforts.</p>
+                <h3>Georgetown, Guyana</h3>
+                <p>Presented by Mayor Alfred Mentore as a symbol of bilateral friendship.</p>
             </div>
-            <div class="award-card">
-                <span class="year">2012</span>
-                <h4>e-Ratna</h4>
-                <div class="country">Computer Society of India</div>
-                <p>Awarded during his tenure as Chief Minister for leadership in IT and e-governance.</p>
+            <div class="card">
+                <span class="year">2024</span>
+                <h3>Abuja, Nigeria</h3>
+                <p>Conferred by Minister Nyesom Wike during the historic 2024 visit.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="recognitions">
-        <div class="section-title">
-            <h2>Global Recognition</h2>
-            <p>Annual rankings and profiles by leading international institutions and media.</p>
-        </div>
-
-        <div class="recognition-list">
-            <div class="recognition-item">
-                <div class="rec-label">2024</div>
-                <div class="rec-award">Best Global Music Performance (Nominee)</div>
-                <div class="rec-org">Grammy Awards</div>
-            </div>
-            <div class="recognition-item">
-                <div class="rec-label">2023</div>
-                <div class="rec-award">Sabse Tez Neta</div>
-                <div class="rec-org">Aaj Tak</div>
-            </div>
-            <div class="recognition-item">
-                <div class="rec-label">2021</div>
-                <div class="rec-award">5th Greatest Leader in the World</div>
-                <div class="rec-org">Fortune Magazine</div>
-            </div>
-            <div class="recognition-item">
-                <div class="rec-label">2018</div>
-                <div class="rec-award">9th Most Powerful Person in the World</div>
-                <div class="rec-org">Forbes</div>
-            </div>
-            <div class="recognition-item">
-                <div class="rec-label">2016</div>
-                <div class="rec-award">Person of the Year (Reader's Poll)</div>
-                <div class="rec-org">TIME Magazine</div>
-            </div>
-            <div class="recognition-item">
-                <div class="rec-label">2014</div>
-                <div class="rec-award">Asian of the Year</div>
-                <div class="rec-org">The Straits Times</div>
+            <div class="card">
+                <span class="year">2019</span>
+                <h3>Houston, USA</h3>
+                <p>Presented by Mayor Sylvester Turner during the 'Howdy Modi' event.</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery">
-        <div class="section-title">
-            <h2>Diplomatic Moments</h2>
-            <p>Capturing the conferring of prestigious honours from worldwide visits.</p>
+    <!-- HONORARY AWARDS -->
+    <section id="honorary">
+        <div class="section-header">
+            <h2>Honorary Awards</h2>
+            <div class="divider"></div>
         </div>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/id/10/800/600" alt="Diplomatic Visit">
-                <div class="gallery-caption">Order of King Abdulaziz, Saudi Arabia</div>
+        <div class="grid">
+            <div class="card">
+                <span class="year">2018</span>
+                <h3>Champions of the Earth (UN)</h3>
+                <p>The UN's highest environmental award for policy leadership in solar energy.</p>
             </div>
-            <div class="gallery-item">
-                <img src="https://picsum.photos/id/12/800/600" alt="Diplomatic Visit">
-                <div class="gallery-caption">Order of the Dragon King, Bhutan</div>
+            <div class="card">
+                <span class="year">2019</span>
+                <h3>Global Goalkeepers Award</h3>
+                <p>Presented by the Gates Foundation for the Swachh Bharat Mission (Clean India).</p>
             </div>
-            <div class="gallery-item">
-                <img src="https://picsum.photos/id/15/800/600" alt="Diplomatic Visit">
-                <div class="gallery-caption">Order of Excellence, Guyana</div>
+            <div class="card">
+                <span class="year">2018</span>
+                <h3>Seoul Peace Prize</h3>
+                <p>Recognized for contributions to global peace via the 'Modi Doctrine'.</p>
             </div>
-            <div class="gallery-item">
-                <img src="https://picsum.photos/id/18/800/600" alt="Diplomatic Visit">
-                <div class="gallery-caption">Medal of the Knesset, Israel</div>
+            <div class="card">
+                <span class="year">2024</span>
+                <h3>Grammy Nomination</h3>
+                <p>Nominated for "Best Global Music Performance" for the song 'Abundance in Millets'.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGISLATURES -->
+    <section id="legislature">
+        <div class="section-header">
+            <h2>Legislative Addresses</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Year</th><th>Legislature</th><th>Country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2026</td><td>The Knesset</td><td>Israel</td></tr>
+                    <tr><td>2025</td><td>Parliament of Ethiopia</td><td>Ethiopia</td></tr>
+                    <tr><td>2025</td><td>Parliament of Namibia</td><td>Namibia</td></tr>
+                    <tr><td>2024</td><td>National Assembly of Guyana</td><td>Guyana</td></tr>
+                    <tr><td>2023</td><td>United States Congress (2nd Time)</td><td>USA</td></tr>
+                    <tr><td>2016</td><td>United States Congress</td><td>USA</td></tr>
+                    <tr><td>2015</td><td>Parliament of the United Kingdom</td><td>UK</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- POLICY SECTION -->
+    <section>
+        <div class="policy-banner">
+            <h2>The Scholastic Policy</h2>
+            <div class="policy-content">
+                <p>Prime Minister Narendra Modi maintains a strict personal policy of <strong>not accepting honorary degrees</strong>. He has declined honorary doctorates from Southern University (2014), Banaras Hindu University (2016), and Maharaja Sayajirao University of Baroda, emphasizing his preference for work over honorary titles.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
+        <div class="footer-links">
+            <div>
                 <h4>Narendra Modi</h4>
                 <p>14th Prime Minister of India</p>
-                <p>Leadership, Reform, Growth.</p>
+                <p>Archived Data: 2014—2026</p>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
+            <div>
+                <h4>Categories</h4>
                 <p>State Honours</p>
-                <p>Legislative Addresses</p>
                 <p>Eponyms</p>
+                <p>Legislative Addresses</p>
             </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
+            <div>
+                <h4>Official Site</h4>
                 <p>narendramodi.in</p>
-                <p>Twitter / X</p>
-                <p>YouTube</p>
+                <p>pmoindia.gov.in</p>
             </div>
         </div>
         <div class="copy">
-            &copy; 2026 AINexForge. All rights reserved.
+            &copy; 2026 AINexForge. Data compiled from official international government records and diplomatic archives.
         </div>
     </footer>
 
     <script>
-        // Scroll Progress Bar
+        // Progress Bar Script
         window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
             document.getElementById("progress-bar").style.width = scrolled + "%";
         };
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Simple Fade-in Observer
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.award-card, .table-container, .recognition-item').forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "all 0.6s ease-out";
-            observer.observe(el);
-        });
     </script>
 </body>
 </html>
